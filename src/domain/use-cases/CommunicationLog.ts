@@ -1,5 +1,5 @@
-import { CommunicationLog } from "../entities/CommunicationLog.ts";
-import { db } from "../../infrastructure/database/firebase.ts";
+import { CommunicationLog } from "../entities/CommunicationLog";
+import { db } from "../../infrastructure/database/firebase";
 import { Timestamp } from "firebase-admin/firestore";
 
 export class LogCommunication {

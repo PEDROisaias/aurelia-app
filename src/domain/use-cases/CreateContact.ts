@@ -1,5 +1,5 @@
-import { Contact } from "../entities/Contact.ts";
-import { db } from "../../infrastructure/database/firebase.ts";
+import { Contact } from "../entities/Contact";
+import { db } from "../../infrastructure/database/firebase";
 import { request } from "node:http";
 
 export class CreateContact {

@@ -1,4 +1,4 @@
-import { SOSEvent } from "../entities/SOSEvent.ts";
+import { SOSEvent } from "../entities/SOSEvent";
 
 export interface SOSEventRepository {
     save(event: SOSEvent): Promise<SOSEvent>;

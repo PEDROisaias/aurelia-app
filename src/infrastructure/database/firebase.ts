@@ -5,7 +5,7 @@ import path from 'path';
 
 dotenv.config();
 
-const credentialsPath = path.resolve(__dirname, `../../../../${process.env.FIREBASE_CREDENTIALS}`);
+const credentialsPath = path.resolve(process.cwd(), process.env.FIREBASE_CREDENTIALS!);
 const serviceAccount = require(credentialsPath);
 
 const app = initializeApp({

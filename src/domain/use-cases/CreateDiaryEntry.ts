@@ -1,5 +1,5 @@
-import { Diary } from '../entities/Diary.ts';
-import { DiaryRepository } from '../repositories/DiaryRepository.ts';
+import { Diary } from '../entities/Diary';
+import { DiaryRepository } from '../repositories/DiaryRepository';
 
 export class CreateDiaryEntry {
     constructor(private diaryRepository: DiaryRepository) {}

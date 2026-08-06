@@ -1,4 +1,4 @@
-import type { Task } from '../entities/Task.ts';
+import type { Task } from '../entities/Task';
 
 export interface TaskRepository {
     create(task: Task): Promise<Task>;

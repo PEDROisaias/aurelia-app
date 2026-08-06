@@ -1,6 +1,6 @@
-import { db } from '../../infrastructure/database/firebase.ts';
-import { SOSEvent } from '../../domain/entities/SOSEvent.ts';
-import { SOSEventRepository } from '../../domain/repositories/SOSEventRepository.ts';
+import { db } from './firebase';
+import { SOSEvent } from '../../domain/entities/SOSEvent';
+import { SOSEventRepository } from '../../domain/repositories/SOSEventRepository';
 import { Timestamp } from 'firebase-admin/firestore';
 
 export class FirestoreSOSEventRepository implements SOSEventRepository {

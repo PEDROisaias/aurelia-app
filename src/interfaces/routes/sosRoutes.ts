@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { SOSController } from '../controllers/SOSController.ts';
-import { FirestoreSOSEventRepository } from '../../infrastructure/database/FirestoreSOSEventRepository.ts';
-import { TriggerSOSEvent } from '../../domain/use-cases/TriggerSOSEvent.ts';
+import { SOSController } from '../controllers/SOSController';
+import { FirestoreSOSEventRepository } from '../../infrastructure/database/FirestoreSOSEventRepository';
+import { TriggerSOSEvent } from '../../domain/use-cases/TriggerSOSEvent';
 
 const sosRoutes = Router();
 

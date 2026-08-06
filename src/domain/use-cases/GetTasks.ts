@@ -1,5 +1,5 @@
-import { Task } from "../entities/Task.ts";
-import { TaskRepository } from "../repositories/TaskRepository.ts";
+import { Task } from "../entities/Task";
+import { TaskRepository } from "../repositories/TaskRepository";
 
 export class GetTask {
     constructor(private taskRepository: TaskRepository) {}

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { GeneratePatientReport } from '../../domain/use-cases/GeneratePatientReport.ts';
+import { GeneratePatientReport } from '../../domain/use-cases/GeneratePatientReport';
 
 export class ReportController {
     constructor(private generatePatientReport: GeneratePatientReport) {}

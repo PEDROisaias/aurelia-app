@@ -1,6 +1,6 @@
-import { AureliaInteraction } from "../entities/AureliaInteraction.ts";
-import { AureliaRepository } from "../repositories/AureliaRepository.ts";
-import { LLMService } from "../repositories/LLMService.ts";
+import { AureliaInteraction } from "../entities/AureliaInteraction";
+import { AureliaRepository } from "../repositories/AureliaRepository";
+import { LLMService } from "../repositories/LLMService";
 
 export class ProcessChatMessage {
     constructor(

@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import { CreateTaskUseCase } from '../../domain/use-cases/CreateTask.ts';
-import { TaskRepository } from '../../domain/repositories/TaskRepository.ts';
-import { GetTask } from '../../domain/use-cases/GetTasks.ts';
-import { DeleteTask } from '../../domain/use-cases/DeleteTask.ts';
-import { UpdateTask } from '../../domain/use-cases/UpdateTask.ts';
+import { CreateTaskUseCase } from '../../domain/use-cases/CreateTask';
+import { TaskRepository } from '../../domain/repositories/TaskRepository';
+import { GetTask } from '../../domain/use-cases/GetTasks';
+import { DeleteTask } from '../../domain/use-cases/DeleteTask';
+import { UpdateTask } from '../../domain/use-cases/UpdateTask';
 
 export class TaskController {
     constructor(private createTaskUseCase: CreateTaskUseCase, private taskRepository: TaskRepository) {}
@@ -28,7 +28,17 @@ export class TaskController {
 
     async getTasks(req: Request, res: Response) {
         try {
+            console.log('=== getTasks chamado ===');
+            console.log('userId da URL:', req.params.userId);
+            console.log('req.user:', req.user);
+            
             const userId = req.params.userId as string;
+            const requester = req.user!;
+
+            if (requester.role === 'patient' && requester.uid !== userId) {
+                return res.status(403).json({ error: 'Acesso proibido. Pacientes só podem acessar suas próprias tarefas.' });
+            }
+
             const getTaskUseCase = new GetTask(this.taskRepository);
             const tasks = await getTaskUseCase.execute(userId);
             

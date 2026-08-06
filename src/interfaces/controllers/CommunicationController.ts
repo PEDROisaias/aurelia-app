@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { LogCommunication } from "../../domain/use-cases/CommunicationLog.ts";
+import { LogCommunication } from "../../domain/use-cases/CommunicationLog";
 
 export class CommunicationController {
     constructor(private logCommunication: LogCommunication) {}

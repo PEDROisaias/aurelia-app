@@ -1,5 +1,5 @@
-import type { Task } from "../entities/Task.js";
-import type { TaskRepository } from "../repositories/TaskRepository.js";
+import type { Task } from "../entities/Task";
+import type { TaskRepository } from "../repositories/TaskRepository";
 
 export class CreateTaskUseCase {
   constructor(private taskRepository: TaskRepository) {}
@@ -17,3 +17,4 @@ export class CreateTaskUseCase {
     return this.taskRepository.create(newTask);
   }
 }
+

@@ -1,6 +1,5 @@
-import { error } from 'node:console';
-import { Task } from '../../domain/entities/Task.js';
-import { TaskRepository } from '../../domain/repositories/TaskRepository.js';
+import { Task } from '../../domain/entities/Task';
+import { TaskRepository } from '../../domain/repositories/TaskRepository';
 import { getFirestore } from 'firebase-admin/firestore';
 
 export class FirestoreTaskRepository implements TaskRepository {

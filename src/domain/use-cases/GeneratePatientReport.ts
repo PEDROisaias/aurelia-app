@@ -1,7 +1,6 @@
-import { CaregiverReport } from "../entities/CaregiverReport.ts";
-import { db } from '../../infrastructure/database/firebase.ts';
+import { CaregiverReport } from "../entities/CaregiverReport";
+import { db } from '../../infrastructure/database/firebase';
 import { Timestamp } from "firebase-admin/firestore";
-import { start } from "node:repl";
 
 export class GeneratePatientReport {
     async execute(patientId: string, diasAnalise: number = 7): Promise<CaregiverReport> {

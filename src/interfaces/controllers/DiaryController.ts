@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { CreateDiaryEntry } from '../../domain/use-cases/CreateDiaryEntry.ts';
+import { CreateDiaryEntry } from '../../domain/use-cases/CreateDiaryEntry';
 
 export class DiaryController {
     constructor(private createDiaryEntry: CreateDiaryEntry) {}

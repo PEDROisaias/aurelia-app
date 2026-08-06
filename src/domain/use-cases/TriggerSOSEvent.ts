@@ -1,9 +1,6 @@
-import { title } from 'node:process';
-import { SOSEvent } from '../entities/SOSEvent.ts';
-import { SOSEventRepository } from '../repositories/SOSEventRepository.ts';
+import { SOSEvent } from '../entities/SOSEvent';
+import { SOSEventRepository } from '../repositories/SOSEventRepository';
 import { getMessaging } from 'firebase-admin/messaging';
-import { channel } from 'node:diagnostics_channel';
-import { error } from 'node:console';
 
 export class TriggerSOSEvent {
     constructor(private sosEventRepository: SOSEventRepository) {}

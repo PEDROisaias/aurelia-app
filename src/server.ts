@@ -1,14 +1,19 @@
 import express from 'express';
 import cors from 'cors';
-import taskRoutes from './interfaces/routes/taskRoutes.js';
-import diaryRoutes from './interfaces/routes/diaryRoute.ts';
-import sosRoutes from './interfaces/routes/sosRoutes.ts';
-import communicationRoutes from './interfaces/routes/communicationRoutes.ts';
+import diaryRoutes from './interfaces/routes/diaryRoute';
+import sosRoutes from './interfaces/routes/sosRoutes';
+import communicationRoutes from './interfaces/routes/communicationRoutes';
+import taskRoutes from './interfaces/routes/taskRoutes';
+
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.get('/health', (req, res) => {
+   res.status(200).json({ status: 'ok', message: 'Aurelia API está rodando' });
+});
 
 app.use('/api', taskRoutes);
 app.use('/api', diaryRoutes);

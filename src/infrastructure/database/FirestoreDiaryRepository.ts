@@ -1,6 +1,6 @@
-import { db} from './firebase.ts';
-import { Diary } from '../../domain/entities/Diary.ts';
-import { DiaryRepository } from '../../domain/repositories/DiaryRepository.ts';
+import { db} from './firebase';
+import { Diary } from '../../domain/entities/Diary';
+import { DiaryRepository } from '../../domain/repositories/DiaryRepository';
 import { Timestamp } from 'firebase-admin/firestore';
 
 export class FirestoreDiaryRepository implements DiaryRepository {

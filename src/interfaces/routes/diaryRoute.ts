@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { DiaryController } from '../controllers/DiaryController.ts';
-import { FirestoreDiaryRepository } from '../../infrastructure/database/FirestoreDiaryRepository.ts';
-import { CreateDiaryEntry } from '../../domain/use-cases/CreateDiaryEntry.ts';
+import { DiaryController } from '../controllers/DiaryController';
+import { FirestoreDiaryRepository } from '../../infrastructure/database/FirestoreDiaryRepository';
+import { CreateDiaryEntry } from '../../domain/use-cases/CreateDiaryEntry';
 
 const diaryRoutes = Router();
 

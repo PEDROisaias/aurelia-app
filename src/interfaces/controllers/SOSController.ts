@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { TriggerSOSEvent } from '../../domain/use-cases/TriggerSOSEvent.ts';
+import { TriggerSOSEvent } from '../../domain/use-cases/TriggerSOSEvent';
 
 export class SOSController {
     constructor(private triggerSOSEvent: TriggerSOSEvent) {}

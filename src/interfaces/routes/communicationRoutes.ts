@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { ContactController } from "../controllers/ContactController.ts";
-import { CommunicationController } from "../controllers/CommunicationController.ts";
-import { CreateContact } from "../../domain/use-cases/CreateContact.ts";
-import { LogCommunication } from "../../domain/use-cases/CommunicationLog.ts";
+import { ContactController } from "../controllers/ContactController";
+import { CommunicationController } from "../controllers/CommunicationController";
+import { CreateContact } from "../../domain/use-cases/CreateContact";
+import { LogCommunication } from "../../domain/use-cases/CommunicationLog";
 
 const communicationRoutes = Router();
 

@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { ReportController } from "../controllers/ReportController.ts";
-import { GeneratePatientReport } from "../../domain/use-cases/GeneratePatientReport.ts";
+import { ReportController } from "../controllers/ReportController";
+import { GeneratePatientReport } from "../../domain/use-cases/GeneratePatientReport";
 const router = Router();
 
 const reportUseCase = new GeneratePatientReport();

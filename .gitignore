@@ -4,6 +4,7 @@
 *.local
 *.secret
 credentials.json
+src/config/firebase-credentials.json
 secrets.*
 *.key
 *.pem
