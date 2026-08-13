@@ -16,7 +16,6 @@
     // "rewriteRelativeImportExtensions": true,
     // For nodejs:
     "lib": ["esnext"],
-    "types": ["node"],
     // and npm install -D @types/node
 
     // Other Outputs
@@ -43,6 +42,6 @@
     "isolatedModules": true,
     // "noUncheckedSideEffectImports": true,
     // "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }
