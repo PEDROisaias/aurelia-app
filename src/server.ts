@@ -4,6 +4,7 @@ import diaryRoutes from './interfaces/routes/diaryRoute';
 import sosRoutes from './interfaces/routes/sosRoutes';
 import communicationRoutes from './interfaces/routes/communicationRoutes';
 import taskRoutes from './interfaces/routes/taskRoutes';
+import medicationRoutes from './interfaces/routes/medicationRoutes';
 
 
 const app = express();
@@ -19,6 +20,7 @@ app.use('/api', taskRoutes);
 app.use('/api', diaryRoutes);
 app.use('/api', sosRoutes);
 app.use('/api', communicationRoutes);
+app.use('/api', medicationRoutes);
 
 const PORT = process.env.PORT || 3000;
 
